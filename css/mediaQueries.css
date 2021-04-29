@@ -1,0 +1,419 @@
+@media only screen and (max-width: 1600px) {
+  .centered > p {
+    width: 40%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .centered {
+    position: absolute;
+    top: 23%;
+    font-size: 175%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .centered {
+    position: absolute;
+    top: 23%;
+    font-size: 175%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+.centered {
+    position: absolute;
+    top: 20%;
+    font-size: 175%;
+  }
+
+}
+
+@media only screen and (max-width: 1100px) {
+ .centered {
+    position: absolute;
+    top: 20%;
+    font-size: 175%;
+  }
+ 
+  #about.flex img {
+    width: 40%;
+  }
+
+  .flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    
+    .menu a {
+        display: block;
+        margin: 0;
+    }
+    
+    #toggle:checked + .menu {
+        display: block;
+    }
+    
+  label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 50px;
+    }
+  
+  .fa-linkedin, .fa-github {
+    font-size: 35px;
+  }
+  
+ #navbar {
+  padding:0px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .centered {
+    position: absolute;
+    top: 20%;
+    font-size: 175%;
+  }
+  
+  label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 50px;
+    }
+  
+  .fa-linkedin, .fa-github {
+    font-size: 35px;
+  }
+  
+ #navbar {
+  padding:0px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .centered {
+    position: absolute;
+    top: 11.5%;
+    font-size: 175%;
+  }
+  
+  label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 50px;
+    }
+
+ #navbar {
+  padding:0px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .centered {
+    position: absolute;
+    top: 14%;
+    font-size: 175%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  .centered {
+    position: absolute;
+    top: 12%;
+    font-size: 175%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .centered {
+    position: absolute;
+    top: 11%;
+    font-size: 150%;
+  }
+
+  .fa-linkedin, .fa-github {
+    font-size: 40px;
+  }
+	
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 50px;
+    }
+
+#navbar {
+  padding:0px;
+}	
+	
+  div.flex {
+    font-size: 120%;
+  }
+  div.flex {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .image {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .flex p {
+    width: 95%;
+    margin-left: 1%;
+  }
+
+  #resume img {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .centered {
+    position: absolute;
+    top: 11%;
+    font-size: 150%;
+  }
+
+  .fa-linkedin, .fa-github {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .centered {
+    position: absolute;
+    top: 9%;
+    font-size: 150%;
+  }
+
+  .fa-linkedin, .fa-github {
+    font-size: 40px;
+  }
+  
+  .container img {
+    height: 600px;
+  }
+  
+  .socials p {
+    font-size: 100%;
+    line-height: 50px;
+  }
+  
+  #contact form {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+ .background-pic {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+   .fa-linkedin, .fa-github {
+    font-size: 35px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 10%;
+    font-size: 100%;
+  }
+  
+  footer {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+ .background-pic {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+   .fa-linkedin, .fa-github {
+    font-size: 35px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 8%;
+    font-size: 100%;
+  }
+  
+  footer {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+ .background-pic {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+  .centered {
+    position: absolute;
+    top: 8%;
+    font-size: 85%;
+  }
+  
+  footer {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .centered {
+    position: absolute;
+    top: 8%;
+    font-size: 75%;
+  }
+
+  .fa-linkedin, .fa-github {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .centered {
+    position: absolute;
+    top: 7%;
+    font-size: 75%;
+  }
+
+  .fa-linkedin, .fa-github {
+    font-size: 25px;
+  }
+
+  #resume img {
+    width: 60%;
+    margin-bottom: 8%;
+  }
+
+  .flip-box {
+    width: 400px;
+    height: 350px;
+  }
+
+  .project {
+    width: 80%;
+    padding: 3%;
+    margin: 0;
+  }
+
+  .flip-box-back > h3, p {
+    width: 95%;
+    margin: auto;
+    line-height: 25px;
+  }
+
+  .flip-box-back > h3 {
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  input[type=submit], [type=reset] {
+    line-height: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 416px) {
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 50px;
+    }
+
+  .centered {
+    position: absolute;
+    top: 8%;
+    font-size: 65%;
+  }
+
+#navbar {
+  padding:0px;
+}
+
+  .fa-linkedin, .fa-github {
+    font-size: 25px;
+  }
+
+
+  .flip-box p:nth-of-type(1) {
+    font-weight: bold;
+    margin-top: 0.5%;
+  }
+  .flip-box {
+    width: 115%;
+    height: 310px;
+    margin-bottom: 10%;
+  }
+
+  .flip-box p {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 20px;
+  }
+
+ #contact form {
+    width: 80%;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  footer {
+    line-height: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 376px) {
+
+  .centered {
+    position: absolute;
+    top: 9%;
+    font-size: 35%;
+  }
+
+  .fa-linkedin, .fa-github {
+    font-size: 15px;
+  }
+
+
+  .flip-box {
+    width: 115%;
+    height: 280px;
+    margin-bottom: 20%;
+  }
+
+  .flip-box p {
+    font-size: 90%;
+  }
+
+}

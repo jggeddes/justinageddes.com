@@ -1,0 +1,437 @@
+body {background-image: url("../images/paper.jpg");}
+ 
+* {
+    margin: 0;
+  }
+
+/* Navbar */
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color:white;
+}
+
+#toggle {
+    display: none;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-size: 1.5rem;
+  padding:5px;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+ 
+}
+
+#navbar a:hover {
+  background-color: #5d5d5d;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.brand-name {
+  letter-spacing: 2px;
+}
+
+/* Home */
+#background {
+    width: 100%;
+  }
+
+.background-pic {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 175%;
+    color: white;
+  }
+
+.centered h1, .centered p{
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+  }
+
+/* Social Media */
+.fa-github {
+    background: black;
+  }
+
+.fa-linkedin {
+	background: #007bb5;
+	}
+
+.fa-linkedin, .fa-github {
+    color: white;
+    margin: 1%;
+    padding: 1.5%;
+    font-size: 50px;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 1px solid white;
+  }
+
+.fa:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 0px 7px 2px #ffffff;
+  border-style: solid;
+}
+
+/* About */
+#about {
+    color: black;
+    text-align:center;
+    padding-bottom:50px;
+  }
+
+#about h1 {
+	font-size: 300%;
+    margin-top: 50px;
+    border-bottom: 1.5px solid #D55957;
+  }
+
+div.flex {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+.flex p {
+    width: 60%;
+    margin-left: 10%;
+    line-height: 50px;
+    color: black;
+    font-size:18px;
+  }
+  
+#about img {
+    margin-top:3px;
+    border-width: 30px;
+    border-image: url("../images/abstract.jpg") 300 round;
+    box-shadow: 10px 10px 6px #333;
+  }
+
+/* Resume */
+#resume img {
+ 	width: 30%;
+    margin: 3%;
+    box-shadow: 5px 10px 7px #333;
+}
+
+#resume img:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 1s;
+  }
+
+#resume {
+    text-align: center;
+    padding: 2%;
+    font-size: 150%;
+    background-image: url("../images/paper.jpg");
+  }
+
+#resume h1 {
+    color:black;
+    font-size: 225%;
+    margin-top: 50px;
+    border-bottom: 1.5px solid #D55957;
+  }
+  
+/* Skills */
+#skills {
+    text-align: center;
+    padding: 2%;
+    font-size: 175%;
+    background-image: url("../images/paper.jpg");
+  }
+
+#skills h1 {
+    color: black;
+    font-size: 200%;
+    margin-top: 50px;
+    border-bottom: 1.5px solid #D55957;
+  }
+  
+/* Skills Section - Icons */
+.icon-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.icon-display i {
+  margin: 30px;
+}
+
+.icon-display i:hover {
+  transform: scale(1.2);
+  transition-duration: .4s;
+}
+
+.icon-display img {
+  min-height: 150px;
+  width: 120px;
+  margin: 30px;
+}
+
+.icon-display img:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+.fa-html5 {
+  font-size: 150px;
+  color: #FFA500;
+}
+
+.fa-css3-alt {
+  font-size: 150px;
+  color: #0000ff;
+}
+
+.fa-sass {
+  font-size: 150px;
+  color: #b37399;
+}
+
+.fa-js {
+  font-size: 150px;
+  color: #f7df1e;
+}
+
+.fa-php {
+  font-size: 150px;
+  color: #7951A8;
+}
+
+.fa-git {
+  font-size: 150px;
+  color:black;
+}
+
+/* Portfolio */
+#portfolio {
+    text-align: center;
+    padding: 2%;
+    font-size: 150%;
+    background-image: url("../images/paper.jpg");
+  }
+
+#portfolio h1 {
+    color:black;
+    font-size: 225%;
+    margin-top: 50px;
+    border-bottom: 1.5px solid #D55957;
+  }
+
+/* Portfolio - Flip Cards */
+.container {
+  display: flex; 
+}
+
+.flip-card img {
+    width: 100%;
+    height:100%;
+  }
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  width: 50%;
+  flex: 100%;
+  padding: 3%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-image: url("../images/abstract.jpg") 300 round;
+  border-width: 8px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back > h3, p {
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+    line-height: 30px;
+    color: black;
+  }
+
+.flip-card-back > h3 {
+    padding-top:20px;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+.flip-card-back > p {
+    font-size: 80%;
+  }
+
+.flip-card-back button {
+    background-color: #D95B5B;
+    color: white;
+    font-style: bold;
+    line-height: 30px;
+    font-size: 80%;
+    box-shadow: 6px 6px 6px #333;
+    border-radius: 30px;
+  }
+
+.flip-card-back button:hover {
+    background: rgb(255,255,255);
+	background: radial-gradient(circle, rgba(255,255,255,1) 5%, rgba(30,201,218,1) 32%, rgba(51,51,51,1) 84%);
+    color: black;
+    font-style: bold;
+  }
+  
+/* Contact */
+#contact {
+    text-align: center;
+    padding: 2%;
+    font-size: 150%;
+    background-image: url("../images/paper.jpg");
+  }
+
+#contact h1 {
+    color:black;
+    font-size: 200%;
+    margin-top: 50px;
+    border-bottom: 1.5px solid #D55957;
+  }
+
+/* Contact - Form */
+#container{
+            width: 90%;
+            padding: 10px;
+            margin: auto;
+        }
+
+#container form input, textarea{
+            display: block;
+            padding-bottom: 10px;
+            margin: auto;
+            margin-bottom: 5px;
+            width: 60%;
+            height:75px;
+        }
+
+#contact form {
+    color: white;
+    background-color: #37395E;
+    width: 40%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 3%;
+    border-radius: 20px;
+  }
+
+#contact form p {
+    color: white;
+    font-size:60%;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 20px;
+  }
+  
+#contact .form-fields {
+			display: block;
+            padding-bottom: 10px;
+            margin: auto;
+            margin-bottom: 20px;
+            width: 60%;
+            height:20px;
+	}
+	
+input[type=submit], [type=reset] {
+    background-color: #D95B5B;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 20%;
+    margin: 2%;
+    line-height: 30px;
+  }
+
+.reset:hover {
+	background: rgb(255,255,255);
+	background: radial-gradient(circle, rgba(255,255,255,1) 5%, rgba(30,201,218,1) 32%, rgba(51,51,51,1) 84%);
+}
+
+.submit:hover {
+	background: rgb(255,255,255);
+	background: radial-gradient(circle, rgba(255,255,255,1) 5%, rgba(30,201,218,1) 32%, rgba(51,51,51,1) 84%);
+}
+
+/* Footer */ 
+footer div {
+	background-image: url("../images/abstract.jpg");
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    font-size: 150%;
+    padding: 3%;
+    color: white;
+  }
