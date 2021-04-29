@@ -1,0 +1,129 @@
+/* SCSS */
+.container {
+  background: white;
+  max-width: 860px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: solid black .1em; }
+
+.container:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+body {
+  background: white; }
+
+p {
+  font-size: 12px; }
+
+.headerimage {
+  height: 100px;
+  border: solid white .1em;
+  margin: 3px; }
+
+header {
+  background: gray;
+  color: white; }
+
+nav {
+  color: white;
+  background-color: black;
+  line-height: 300%;
+  text-transform: uppercase;
+  color: gray;
+  list-style-type: none;
+  padding-right: 60px;
+  padding-left: 60px;
+  text-align: center; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  text-align: center; }
+
+nav a:hovor {
+  color: gray;
+  background-color: white;
+  padding: .5em;
+  background-color: #ddd; }
+
+h1 {
+  margin: 0 auto;
+  padding: 40px; }
+
+h3 {
+  padding-left: 15px;
+  padding-right: 12px; }
+
+.clearfloat {
+  clear: both; }
+
+.section1 {
+  float: left;
+  width: 45%;
+  height: 100%;
+  background-color: white;
+  text-align: left;
+  padding: 75px 25px; }
+
+.section2 {
+  float: right;
+  width: 45%;
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  padding: .01px 15px; }
+
+.section3 {
+  float: right;
+  width: 45%;
+  height: 100%;
+  background-color: white;
+  text-align: left;
+  padding: .01px 15px; }
+
+.form {
+  float: right;
+  width: 45%;
+  height: 100%;
+  background-color: white;
+  text-align: left;
+  padding: 34px 15px; }
+
+img {
+  max-width: 90%;
+  height: 100px;
+  border: solid black .1em; }
+
+.large {
+  max-width: 100%;
+  height: 250%;
+  margin: 2px;
+  padding: 2px;
+  border: solid black .1em; }
+
+form {
+  border: solid black .1em;
+  padding-left: 5px;
+  background-color: lightgray;
+  text-align: center; }
+
+footer {
+  color: white;
+  background: gray;
+  margin: 0 auto;
+  padding: 5px; }
+
+.footerimages {
+  float: right;
+  margin: 3px;
+  height: 5%;
+  width: 5%; }
+
+@media screen and (max-width: 700px) {
+  * {
+    flex-direction: column; } }
+
+/*# sourceMappingURL=responsiveFloatPage.css.map */

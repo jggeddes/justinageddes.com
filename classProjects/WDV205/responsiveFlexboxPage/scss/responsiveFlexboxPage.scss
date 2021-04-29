@@ -1,0 +1,155 @@
+/* SCSS */
+
+* {box-sizing: border-box;}
+  
+body {
+		background: white;
+		font-family: Arial;
+  		margin: 0;
+		}
+
+p {
+	font-size:12px;
+	}
+
+.header {
+		display:flex;
+		background:gray;
+		color:white;
+		text-align:center;
+		padding:40px;
+		}
+
+.headerimage {
+			display:flex;
+			height: 100px;
+			border: solid white .1em;
+			margin: 3px;
+			}
+
+.navbar {
+  display: flex;
+  justify-content:space-around;
+  background-color: black;
+}
+
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.large {
+		max-width:100%;
+		height:250%;
+		margin:2px;
+		padding:2px;
+		border:solid black .1em;
+		}
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.side {
+  flex: 40%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  flex: 60%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+img {
+	max-width: 90%;
+	height: 100px;
+	border: solid black .1em;
+	} 
+
+h1 {
+	margin: 0 auto;
+	padding: 40px;
+	}
+
+h3 {
+	padding-left: 15px;
+	padding-right: 12px;
+	}
+
+section {display:flex;}
+
+.form {
+			display:flex;
+			flex-wrap:nowrap;
+			background-color:white;
+			text-align: left;
+			padding:34px 15px;
+			}
+
+form {
+		display:flex;
+		flex-direction:column;
+		width: 100%;
+		height:100%;
+		border: solid black .1em;
+		padding-left: 10px;
+		background-color: lightgray;
+		text-align:center;
+		}
+
+.clearfloat {
+			clear:both;
+			}
+
+.footer {
+		display:flex;
+		color:white;
+		background:gray;
+		margin: 0 auto;
+		padding:5px;
+		}
+
+.footerimages {
+				float:right;
+				margin: 3px;
+				height: 10%;
+				width:10%;
+				}
+
+.container {
+			display:flex;
+			background: white;
+			max-width: 860px;
+			margin: 0 auto; 
+			padding: 20px;
+			box-sizing: border-box;
+			border: solid black .1em;
+			}
+
+.container:after {
+					content: "";
+					display: block;
+					clear: both;
+					}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+	
+
+
