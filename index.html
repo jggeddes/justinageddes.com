@@ -1,0 +1,439 @@
+<?php
+
+include_once ('php/contact.php');
+
+$fNameErrMsg = "";
+$lNameErrMsg = "";
+$emailErrMsg = "";
+$dobErrMsg = "";
+$messageErrMsg = "";
+
+//var_dump($_POST);
+
+//die('end here');
+
+if(isset($_POST['submit'])){ 
+
+    $fName = $_POST['fName'];
+    $lName = $_POST['lName'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $fNameErrMsg = validateFirstName($fName);
+    $lNameErrMsg = validateLastName($lName);
+    $emailErrMsg = validateEmail($email);
+    $messageErrMsg = validateMessage($message);
+
+   
+
+    if($fNameErrMsg == "" && $lNameErrMsg == "" && $emailErrMsg == "" && $messageErrMsg == ""){
+        
+        $mailTo = 'contact@justinageddes.com';
+        $headers = "From: " . $email;
+        $txt = "You have recieved an email from " . $fName . " " . $lName  . ".\n\n". "Email: " . $email . "\n\n" . $message;
+
+
+        $retval = mail($mailTo, $message, $txt, $headers);
+        if( $retval == true ) {
+            echo "Message sent successfully...";
+         }else {
+            echo "Message could not be sent...";
+         }
+    }
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Justina Johnson's Portfolio</title>
+    
+    <!-- Link Javascript -->
+    <script src="js/index.js"></script>
+
+	<!--FONT AWESOME CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- Link Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href = "css/index.css">
+    <link rel="stylesheet" href = "css/mediaQueries.css">
+</head>
+<body onload="getYear()">
+
+	<div id="navbar">
+		<label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+		<div class="menu">
+		<div class="brand-name">
+            <a style="float:left" href="#">Justina Johnson (Geddes)</a>
+        </div>
+  		<a style="float:right" href="homework.html">Homework</a>
+  		<a style="float:right" href="#contact">Contact</a>
+  		<a style="float:right" href="#portfolio">Portfolio</a>
+  		<a style="float:right" href="#skills">Skills</a>
+  		<a style="float:right" href="#resume">Resume</a>
+  		<a style="float:right" href="#about">About</a>
+  		<a style="float:right" href="#home">Home</a>
+  		</div>
+	</div>
+			
+	<div id="home">
+        <div class="background-pic">
+        <img id="background" src = "images/abstract.jpg" alt = "background abstract image" width = "100%">
+        </div>
+        <div class = "centered">
+          <h1>Justina Johnson,</h1>
+          <h1>Web Developer</h1>
+          <br>
+          <hr class="d-sm-none" style="width: 65%; margin-left: auto;
+    margin-right: auto;">
+          <br>
+          <p>I am a web developer looking for work in the Des Moines, Iowa Area.</p>
+       	  <br>
+       	  <hr class="d-sm-none" style="width: 65%; margin-left: auto;
+    margin-right: auto;">
+       	  <br>
+       	  <div class = "socials">
+          	<a href="https://github.com/jggeddes" target=_blank class="fa fa-github"></a>
+          	<a href="https://www.linkedin.com/in/justina-geddes/" target=_blank class="fa fa-linkedin"></a>
+          </div>
+          </div>
+      </div>
+    
+    <div id="about">
+    	<br>
+        <h1>About Me</h1>
+        <br>
+        <br>
+        <div class = "flex">
+    		<img src = "images/me_fall.jpg" alt = "picture of Justina" width="300px" height="300px">
+          <p>Hello! My name is Justina Johnson! I am a student with a passion for web development. I am on track to graduate here in May and receive my Web Development AAS degree. I have had a love for web development since my Junior year of high school when I made my first website from a website creator. From there I enjoyed using website building platforms but wanted to further understand how websites are made. I really enjoy the challenges I face each day in my web development classes. If I'm not sitting behind my laptop, I'm probably sleeping, cleaning, enjoying time with my family, or thinking about getting on my laptop when it's done charging.</p>
+      	</div>
+     </div>
+
+	 <div id="resume">
+        <h1>Resume</h1>
+        <br>
+        <a href="documents/resume.pdf" target="_blank"><img src="images/resume.jpg" alt="Justina's resume"></a>
+      </div>
+     
+     <div id="skills">
+        <h1>Skills</h1>
+        	<br>
+            <div class="icon-display">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-sass"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-php"></i>
+                    <img src="images/mysql.png" alt="My SQL icon">
+                    <img src="images/cpp.svg" alt="My C++ icon">
+                    <i class="fab fa-git"></i>
+                    <img src="images/dw.png" alt="Dreamweaver" width="300px" height="100px">
+                    <img src="images/xd.png" alt="Adobe XD" width="300px" height="100px">
+                    <img src="images/ps.png" alt="Adobe Photoshop" width="300px" height="100px">
+                    <img src="images/ai.png" alt="Adobe Illustrator" width="300px" height="100px">
+                    <img src="images/WordPress.png" alt="WordPress" width="400px" height="100px">
+            </div>
+      </div>
+  
+	 <div id="portfolio">
+	  	<h1>Portfolio</h1>
+	  	<br>
+	  	<div class="container">
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/adventureTravelWebsite.png" alt = "Summit Farms Website">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Adventure Travel Project</h3>
+                  		<p>Class - Intro. to HTML & CSS</p>
+                    	<p>- HTML, CSS, Bootstrap</p><br>
+                  		<a href = "https://github.com/jggeddes" target = _blank><button>Git Repo</button></a>
+                  		<a href = "http://justinageddes.com/classProjects/WDV101/adventure_travel_project/index.html" target = _blank><button>View Site</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/KoalaSite.png" alt = "Koala Project Website">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Koala Bear</h3>
+                  		<p>Class - Intro. HTML & CSS<//p>
+                    	<p>- HTML, CSS, Forms & Flexbox</p>
+                    	<br>
+                  		<a href = "https://github.com/jggeddes" target = _blank><button>Git Repo</button></a>
+                  		<a href = "http://justinageddes.com/classProjects/WDV101/Koala_Site/Koala_Home.html" target = _blank><button>View Site</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/skylineFitness.png" alt = "Fresh N' Fun Wireframe">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Skyline Fitness Wireframe</h3>
+                  <p>Class - Intro to Web Design</p>
+                    <p>- Content writing, Teamwork, Adobe XD, Web Design</p>
+                	<br>
+                  <a style="font-size: 60%;" href = "https://xd.adobe.com/view/1882a76c-2fa8-47a0-7519-5e5232bd2c03-6eb3/" target = _blank ><button>View Desktop Wireframe</button></a>
+                  <a style="font-size: 60%;" href = "https://xd.adobe.com/view/d30e9f7e-5f2c-4713-6eed-ce7adcb49af4-a53f/" target = _blank ><button>View Mobile Wireframe</button></a>
+    				</div>
+  				</div>
+  			</div>
+  		</div>
+  		<br>
+  		<div class="container">
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      					<img src = "images/urbanGardens.png" alt = "Urban Gardens">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Urban Gardens Wireframe</h3>
+                  		<p>Class - Intro. to Web design</p>
+                    	<p>- Content writing, Planning, Adobe XD, Web Design</p>
+                    	<br>
+                  		<a style="font-size: 60%;" href = "https://xd.adobe.com/view/65c65eb9-eb0c-4b44-5dbc-9c4f7a71afd9-13f7/" target = _blank ><button>View Desktop Wireframe</button></a>
+                  		<a style="font-size: 60%;" href = "https://xd.adobe.com/view/24884f7c-9e9c-4b82-6a35-096544c0ec48-52b9/" target = _blank ><button>View Mobile Wireframe</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/toTheLimit.png" alt = "To the Limit: Fitness & Training">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>To the Limit: Fitness & Training</h3>
+                  		<p>Class - Intro. to WordPress</p>
+                    	<p>- WordPress, Content Writing</p>
+                    	<br>
+                  		<a href = "http://justinageddes.com/WDV240/project2/" target = _blank><button>View Site</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/triathlon.png" alt = "WordPress Triathlon">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Triathlon</h3>
+                  		<p>Class - Intro. to WordPress</p>
+                    	<p>- WordPress, Content Writing</p>
+                    	<br>
+                  		<a href = "http://justinageddes.com/WDV240/project3/" target = _blank><button>View Site</button></a>
+    				</div>
+  				</div>
+  			</div>
+  		</div>
+  		<br>
+  		<div class="container">
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/store.png" alt = "Cupcake Store">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Cupcake Store</h3>
+                  		<p>Class - Intro. to WordPress</p>
+                    	<p>- WordPress, Content Writing, Store</p>
+                    	<br>
+                  		<a href = "http://justinageddes.com/WDV240/project5/" target = _blank><button>View Site</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/psBanners.png" alt = "Photoshop Banners">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Banners</h3>
+                  		<p>Class - Into. to Photoshop</p>
+                    	<p>- Adobe Photoshop</p>
+                    	<br>
+                  		<a href = "http://justinageddes.com/classProjects/WDV131/banners_webpage/banners.html" target = _blank><button>View Banners</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/desktopPublishing.png" alt = "Desktop Publishing Projects">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Designs</h3>
+                  		<p>Class - Intro to Desktop Publishing</p>
+                    	<p>- Adobe Photoshop, Adobe Illustrator</p>
+                    	<br>
+                  		<a href = "http://justinageddes.com/classProjects/GRD301/projects/index.html" target = _blank><button>View Designs</button></a>
+    				</div>
+  				</div>
+  			</div>
+  		</div>
+  		<br>
+  		<div class="container">
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/clothingWireframe.png" alt = "Clothing Wireframe">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Clothing Store Wireframe</h3>
+                  		<p>Classes -  Intro to PHP, Website Application Components</p>
+                    	<p>- Adobe Xd, Content writing, Planning</p>
+                    	<br>
+                  		<a style="font-size: 60%;" href = "https://xd.adobe.com/view/7f1cf626-806e-4c09-a342-cce30ed6b099-2a4f/" target = _blank ><button>View Desktop Wireframe</button></a>
+                  		<a style="font-size: 60%;" href = "https://xd.adobe.com/view/e68edf56-2a31-4ff8-885a-5876e04a090c-b3dd/" target = _blank ><button>View Mobile Wireframe</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/johnson'sClothingStore.png" alt = "Johnson's Clothing Store">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Johnson's Clothing Store</h3>
+                  		<p>Classes -  Intro to PHP, Website Application Components</p>
+                    	<p>- Paypal, PHP, form, login</p>
+                    	<br>
+                  		<a href = "#" target = _blank><button>Git Repo</button></a>
+                  		<a href ="http://justinageddes.com/classProjects/WDV341/virtualStorefront/home.html" target = _blank><button>View Site</button></a>
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "images/animals.png" alt = "SPA/PWA">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>SPA/PWA: Animals</h3>
+                  		<p>Class - Emerging Technologies Seminar</p>
+                    	<p>- SPA, Fetch API, JSON Manifest.json, Service Worker, JavaScript, CSS, HTML</p>
+                    	<br>
+                  		<a href = "#" target = _blank><button>Git Repo</button></a>
+                  		<a href = "http://justinageddes.com/currentClasses/WDV495/pwa2/index.html" target = _blank><button>View Site</button></a>
+    				</div>
+  				</div>
+  			</div>
+  		</div>
+  		<br>
+  		<div class="container">
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "#" alt = "Vintage Cooperative">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Coming Soon!</h3>
+                  		<!--
+                  		<p>Class Name</p>
+                    	<p>- skills</p>
+                    	<br>
+                  		<a href = "#" target = _blank><button>Git Repo</button></a>
+                  		<a href = "#" target = _blank><button>View Site</button></a>
+                  		-->
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "#" alt = "React Application">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Coming Soon!</h3>
+                  		<!--
+                  		<p>Class Name</p>
+                    	<p>- skills</p>
+                    	<br>
+                  		<a href = "#" target = _blank><button>Git Repo</button></a>
+                  		<a href = "#" target = _blank><button>View Site</button></a>
+                  		-->
+    				</div>
+  				</div>
+  			</div>
+  			<div class="flip-card">
+  				<div class="flip-card-inner">
+    				<div class="flip-card-front">
+      				<img src = "#" alt = "Recipe Project">
+    				</div>
+      	 			<div class="flip-card-back">
+      					<h3>Coming Soon!</h3>
+                  		<!--
+                  		<p>Class Name</p>
+                    	<p>- skills</p>
+                    	<br>
+                  		<a href = "#" target = _blank><button>Git Repo</button></a>
+                  		<a href = "#" target = _blank><button>View Site</button></a>
+                  		-->
+    				</div>
+  				</div>
+  			</div>
+  		</div>
+	 </div>
+	  
+	 <div id="contact">
+	  	<h1>Contact Me!</h1>
+	  	<br>
+	  	<form method="POST" action="#contact">
+			<h3 style="text-align:center;">Phone: 515-419-1563</h3>
+  <p style="text-align:center; color: white;">*Note: I might not answer. Please leave a message and I'll call back as soon as I can.</p>
+  		  <br>
+  		  
+          <h2>Or fill out the form</h2>
+          <hr class="d-sm-none">
+          <p style="text-align:center; color: white;">*Note: This is probably the best way to contact me!</p>
+          <br>
+			
+           <span style="color:#AFA;"><?php echo $fNameErrMsg; ?></span><input class="form-fields" type="text" name="fName" placeholder="Enter First Name" >
+            
+            <span style="color:#AFA;"><?php echo $lNameErrMsg; ?></span><input class="form-fields" type="text" name="lName" placeholder="Enter Last Name"  >
+			
+            <span style="color:#AFA;"><?php echo $emailErrMsg; ?></span><input class="form-fields" type="email" name="email" placeholder="Enter Email">
+            
+            <span style="color:#AFA;"><?php echo $messageErrMsg; ?></span><textarea name="message" placeholder="Leave me a message!" ></textarea>
+			
+			<input class="reset" type="reset" name="reset" value="Reset">
+            <input class="submit" type="submit" name="submit" value="Submit">
+
+        </form>
+	 </div>
+	  
+	 <footer>
+        <div>Copyright &copy; <span id="copyright"></span> All Rights Reserved</div>
+      </footer>
+      
+<script>
+// When the user scrolls the page, create sticky navbar
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
