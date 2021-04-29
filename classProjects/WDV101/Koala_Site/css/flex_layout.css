@@ -1,0 +1,66 @@
+/* Flex layout for Koala site*/
+
+.flex-container {
+				display:flex;
+				flex-direction:column;
+				width:80%;
+				margin:.5em auto;
+				border:2px solid black;
+				border-radius:25px;
+				box-shadow:15px 15px 5px gray;
+				background-color:white;
+				}
+header img {
+			width:98%;
+			margin:0;
+			border-top-left-radius:25px;
+			border-top-right-radius:25px;
+			}
+
+header {
+		display:flex;
+		flex-direction:column;
+		}
+
+h1 {
+	margin:0;
+	}
+
+nav ul {
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:flex-start;
+		}
+
+.flexgallery {
+				display:flex;
+				flex-direction:row;
+				flex-wrap:wrap;
+				justify-content:center;
+				background-color:lightblue;
+				}
+
+.flex-galley > div {
+					display:flex;
+					margin:.6em;
+					border-color:purple;
+					}
+
+footer {
+		display:flex;
+		background-color:black;
+		text-align:center;
+		border-bottom-left-radius:23px;
+		border-bottom-right-radius:23px;
+		}
+
+footer p{
+		display:flex;
+		color:lightgray;
+		background-color:black;
+		text-align:center;
+		}
+
+
+
+

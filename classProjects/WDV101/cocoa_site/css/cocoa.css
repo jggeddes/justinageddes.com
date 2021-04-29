@@ -1,0 +1,133 @@
+/* The following CSS styles the text*/
+
+@font-face {
+    font-family: 'acmeregular';
+    src: url('fonts/Acme-Regular-webfont.eot');
+    src: url('fonts/Acme-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Acme-Regular-webfont.woff2') format('woff2'),
+         url('fonts/Acme-Regular-webfont.woff') format('woff'),
+         url('fonts/Acme-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Acme-Regular-webfont.svg#acmeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	color:red;
+	font-size:1.2em;
+	text-indent:25px;
+	line-height:1.5;
+	}
+
+body {background-color:bisque;}
+
+
+h1 {
+	font-family: 'Limelight', cursive;
+	color:white;
+	background-color:black;
+	text-align: center;
+	word-spacing:5px;
+	}
+	
+	
+h3, h4 {
+	font-family: 'acmeregular'; 
+	color:red;
+	border-top:2px dashed red;
+	font-size:2.0em;
+	}
+	
+
+ul li{
+		text-transform:uppercase;
+		color:purple;
+		list-style-type:square;
+		list-style-image:url("../images/foundation_bullet.gif");
+		}
+
+ol li{
+		text-transform:uppercase;
+		color:purple;
+		list-style-type:upper-roman;
+		}
+
+p strong {
+		  color:black;
+		  }
+
+.bluebold {
+			color:darkrblue;
+			font-weight: bold;
+			}
+			
+p.orangebold {
+			color:orange;
+			font-weight: bold;	
+			}	
+
+a {
+	color:green;
+	font-weight: bold;
+	}
+
+a:hover{	
+		color:#47331F;
+		}
+
+p.intro::first-letter {
+				color:purple;
+				font-size: 200%;
+				}
+
+img{
+	border:5px solid darkblue;
+	padding:15px;
+	background-color:white;
+	}
+
+
+.noborder {
+			border-style:none;
+			}
+
+nav {
+	background-color:darkblue;
+	line-height:200%;
+	}
+
+nav li {
+		display:inline;
+		list-style-type:none;
+		padding-right:40px;
+		}
+
+nav a {
+		color:white;
+		text-decoration:none;
+		}
+
+nav a:hovor {
+			color:#47331F;
+			background-color:white;
+			padding: .5em;
+			}
+.floatleft{
+			float:left;
+			margin-right:1.2em;
+			margin-bottem: 1.2em;
+			}
+
+.floatright{
+			float:right;
+			margin-left:1.5em;
+			margin-bottom:1.2em;
+			}
+
+.clearfloat {
+			clear:both;
+			}

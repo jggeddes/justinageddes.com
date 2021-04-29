@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Koala Bear Contact Us Page</title>
+
+<!-- Author: Justina Geddes
+Date: October 21st 2019-->
+
+<matta charset="UFT-8">
+<meta name="description" content="Home page for the koala site">
+<meta name="keywords" content="koala bears, KBNIC, education, non-profit">
+
+<link rel="stylesheet" type="text/css" href="css/koala.css">
+<link rel="stylesheet" type="text/css" href="css/flex_layout.css">
+<link rel="stylesheet" type="text/css" herf="css/koala_structure.css">
+
+<style>
+	p {color:indigo;}
+	
+	<link href="https://fonts.googleapis.com/css?family=Limelight&display=swap" rel="stylessheet">
+
+	*{outline:5px solid red;}
+
+
+</style>
+
+</head>
+<body>
+<div class="flex-container">
+
+<header>
+<img src="images/koala_banner_new(3).jpg" alt="koala banner for koala website" class="noborder" > 
+
+<h1>Contact Us</h1>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="Koala_Home.html">Home</a></li>
+		<li><a href="koala_about.html">About</a></li>
+		<li><a href="fast_facts.html">Fast Facts</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="adopt.html">Adopt</a></li>
+		<li><a href="koala_contact.html">Contact Us</a></li>
+	</ul>
+</nav>
+
+
+<form method="post" action="form_response_basic.php">
+<legend>Contact Us!</legend>
+<fieldset>
+<p>Please give us your contact information so we can get back to you.</p>
+<label>First Name:</label>
+<input type="text" name="firstname"><br>
+<label>Last Name:</label>
+<input type="text" name="lastname">
+<br>
+<label>Email:</label>
+<input type="email" name="email" placeholder="yourname@email.com">
+</fieldset>
+
+<fieldset>
+<p>Please choose a topic</p>
+<input type="radio" name="classes" value="Adopt">Adopt<br>
+<input type="radio" name="classes" value="About">About<br>
+<input type="radio" name="classes" value="information">Information<br>
+
+
+<p>Please type your message or question here:</p>
+<textarea name="message" rows="10" cols="50"></textarea>
+<br>
+</fieldset>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+
+<footer>
+<p>©Copyright 2018 All rights reserved. Australian Koala Foundation</p>
+
+<a href="https://www.savethekoala.com" target="_blank">
+<img src="images/KOALA_LOGO(3).svg" alt="koala logo" width="20%" class="noborder"> </a>
+</footer>
+
+</div><!--close flex container div-->
+</body>
+</html>
