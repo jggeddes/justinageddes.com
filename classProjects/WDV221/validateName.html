@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDV221 - Code validateName()</title>
+
+    <style>
+        .errMsg {
+            color:red;
+            font-weight: 200;
+        }
+
+    </style>
+
+    <script>
+
+        function processForm(){
+            //this will run when the form is submitted. 
+            //It will run the validation and display the message
+
+            let inValue= document.querySelector('#first_name').value;
+            document.querySelector('#displayMsg').innerHTML = validateName(inValue);
+
+            if (validateName(inValue) == true) {
+                document.querySelector('#first_name_err').innerHTML ="";
+                document.querySelector('#displayMsg').innerHTML = "Valid content";
+            }
+            
+            else {
+                document.querySelector('#first_name_err').innerHTML =validateName(inValue);
+                document.querySelector('#displayMsg').innerHTML = "";
+            }
+        }
+
+        function validateName(inValue) {
+            //this function will validate the form input.
+            //It will display a message based upon the validation of the input.
+
+            
+            //The input value cannot be empty or all spaces, if so it will return "Input required".
+            
+            if (inValue == "" || !inValue.replace(/\s/g, '').length) {
+                return('Input Required');
+            }
+
+            //The input value cannot contain the following special characters '/' or '\' or ' (apostrophe) or " (quotes), if so it will return "Invalid content".
+
+            if (inValue.includes("'") || inValue.includes('/') || inValue.includes("\\") || inValue.includes('"')){
+                return ('Invalid Content');
+            }
+
+            //The input value cannot have more than 10 characters, if so it will return "Limit of 100 characters".  (Note: test 10, then change to 100)
+
+            if (inValue.length > 100) {
+                return("Limit of 100 characters");
+            }
+
+            //The input value can contain numbers but cannot be all numbers, if so it will return "Invalid content".
+
+            var numbers = (/^[0-9]+$/);
+
+            if(inValue.match(numbers)){
+                return ("Invalid Content");
+            }
+
+            //If the input is valid it will return boolean true.
+            else {return true;}
+
+
+
+        }
+
+        function resetForm() {
+            //this function will run with the reset function to reset the form back to original view
+            document.querySelector('#first_name').value = "";
+            document.querySelector('#first_name_err').innerHTML = "";
+            document.querySelector('#displayMsg').innerHTML = "";
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>WDV221 Intro to Javascript</h1>
+    <h2>UNIT-8 Testing and Validation</h2>
+    <h3>Testing the validateName( )</h3>
+    
+    <form method="POST" action="#">
+        <p>
+            <label for="first_name">First Name: 
+                <input name="first_name" id="first_name" type="text" required="" placeholder="Enter your first name">
+                <span class="errMsg" id="first_name_err"></span>
+            </label>  
+        </p>
+
+        <p>
+            <label for="displayMsg">Validation Message: 
+                <span id="displayMsg"></span>
+            </label>
+        </p>
+
+        <p>
+            <input type="button" value="Process Form" onclick="processForm()">  
+        </p>
+        <p> 
+            <input type="reset" value="Try Again!" onclick="resetForm()">        
+        </p>
+    </form>
+
+</body>
+</html>

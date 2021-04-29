@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html> 
+
+	<head>
+
+    	<meta charset="utf-8">
+    	
+    	
+    	<title>Random Number Generator</title>
+    	
+    	<script>
+
+        	function randomNumber() {
+            	let number = Math.floor((Math.random() * 10) + 1);
+            	document.getElementById("numberdisplay").innerHTML = "Number: " +  number;
+        		}
+
+
+			//This works to...Not for button 
+			//document.getElementById("generate").innerHTML =
+			//Math.floor(Math.random() * 10) + 1;
+
+
+    	</script>
+
+
+
+	</head>
+	<body>
+
+    	<h1>Assignment: Random Number Generator</h1>
+        
+    	<p>For this assigment create a web page.  The page should display a button that will call a function that generates and displays a random number between 1 and 10.</p>
+
+        <p>Use the Javascript Math object to create a random number generator.</p>
+
+		<ul>
+			<li>The function will use a return statement to return the random number</li>
+		</ul>
+	
+
+    	<p id="numberdisplay">Number: </p>
+    	<button onclick="randomNumber()"> Click</button>
+		
+
+	</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Style Object-CSS Interactions In Class Exercises</title>
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+
+<script>
+	function redText() {
+		document.getElementById("myP1").style.color = "#ff0000";
+		}
+	function centerH3() {
+		document.getElementById("H3toChange").style.textAlign = "center";
+		}
+	function leftAlignH3() {
+		document.getElementById("H3toChange").style.textAlign = "left";
+		}
+ 	function changeFont() {
+ 		document.getElementById("fontToChange").style.fontFamily = "Bradley Hand";
+ 		}
+	function changeFontBack() {
+		document.getElementById("fontToChange").style.fontFamily = "initial";
+		}
+	function makeFont24() {
+		document.getElementById("changeFontSize").style.fontSize = "24px";
+		}
+	function makeFontDefault() {
+		document.getElementById("changeFontSize").style.fontSize = "initial";
+		}
+	function makeYellow() {
+		document.getElementById("yellowBackground").style.backgroundColor = "yellow";
+		}
+	function hideFrogImage() {
+		document.getElementById("frogImage").style.visibility = 'hidden';
+		}
+	function showFrogImage() {
+		document.getElementById("frogImage").style.visibility = 'visible';
+		}
+	
+	
+	//Can't figure out how to make frog image bigger 
+	//Questions 11-12 are not complete
+	function doubleFrogImage() {
+        document.getElementById("frogImage").style.resize = "both";
+        }
+        function normalSize() {
+           document.getElementById("frogImage").style.resize = "both";
+        }
+
+	
+	
+	
+	function makeBorder() { 
+            document.getElementById("borderOn").style.border = "thick solid orange";
+        }
+	function removeBorder() { 
+            document.getElementById("borderOn").style.border = "";
+        }
+	function greenBackground(isGreen) {
+            if(isGreen==1){
+                document.getElementById("greenBackgroundChanger").style.backgroundColor = "green";
+            }else if(isGreen==0){
+                document.getElementById("greenBackgroundChanger").style.backgroundColor = "initial";
+            }
+        }
+		
+		
+</script>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h3 id="H3toChange">Style Object - CSS Interactions - In Class Exercises</h3>
+
+<p>Please modify this page to create the following Dynamic HMTL effects. </p>
+
+<p onclick="redText()" id="myP1">1. Click this paragraph to change the font color to red.</p>
+
+<p onmouseover="centerH3()" id="myP2">2. Mousever this paragraph to center the H3 element containing &quot;CSS Interactions&quot;.</p>
+
+<p>3. Click the button to left align the H3 element. </p>
+
+<p>
+  <label>
+  <input type="button" name="button" id="button" value="Left Align H3" onclick="leftAlignH3()"/>
+  </label>
+</p>
+
+<p id="fontToChange" onmouseover="changeFont()">4. Mouseover this paragraph to change the font to a font of you choice. </p>
+
+
+<p id="fontToChange" onclick="changeFontBack()">5. Click on this paragraph to return the font to the default font.</p>
+
+<p>6. Click on the button to make the word <span id="changeFontSize"> SALE </span> font size 24. </p>
+
+<p>
+  <label>
+  <input type="button" name="button2" id="button2" value="Change Font Size" onclick="makeFont24()" />
+  </label>
+</p>
+
+<p>7. Click on the button to return the word to its original size.</p>
+
+<p>
+  <label>
+    <input type="button" name="button3" id="button3" value="Back to Orignal" onclick="makeFontDefault()" />
+  </label>
+</p>
+
+<p id="yellowBackground" onmouseover="makeYellow()"> 8. Use an eventhandler of your choice on this paragraph to make the paragraph background color yellow. </p>
+
+<p onclick="hideFrogImage()">9. Use an onclick event to hide the Frog image shown below.</p>
+
+<p>10. Use the following button to make the Frog image shown below reappear.</p>
+
+<p>
+  <input type="button" name="button4" id="button4" value="Bring Frog Back" onclick="showFrogImage()" />
+</p>
+
+
+<!-- completed -->
+
+	<!-- NOT completed -->
+<p>11. Mouseover the Frog image to make its height and width double its original size.</p>
+
+<img src="frog.jpg" id="frogImage" width="100" height="100" onmouseover="doubleFrogImage()" onclick="normalSize()" />
+
+<p>12. Use a click event on the Frog image to make it return to original size. </p>
+
+	<!-- NOT completed -->
+
+<p id="borderOn" ondblclick="makeBorder()">13. Doubleclick on this paragraph to place a border around this paragraph.</p>
+
+<p onmouseover="removeBorder()">14. Use an event handler of your choice to remove the border from the previous paragraph. </p>
+
+<p id="greenBackgroundChanger" onmouseover="greenBackground(1)" onmouseout="greenBackground(0)">15. Mouseover this paragraph to turn its background color to green. When you mouseoff the paragraph return it to its normal color. </p>
+
+<!-- completed -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

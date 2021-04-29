@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Variables and Data Types Assignment</title>
+
+<style>
+
+body {background-color:#FC6;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+</style>
+
+<script>
+
+	let schoolName = "DMACC";   
+	//exercise 1 - creating a variable with value of DMACC
+	console.log("School Name" + schoolName);
+	
+	let courseName = "WDV221 Intro Javascript"; 
+	//exercise 2 - creating a variable with value of WDV221 Intro Javascript
+	console.log("Course Name" + courseName);
+
+	testScore = 100.00;     
+	// exercise 3 - numeric value with a value of 100.00
+	console.log("Test Score:" + testScore);
+	
+	let courseGrade;  //creates the variable courseGrade
+	console.log(courseGrade); 
+	//exercise 4 - variable without a value
+	
+	let courseCompleted = false; 
+	//exercise 5 - boollean variable with value of false
+	console.log("Is the course completed?" + courseCompleted);
+
+	
+</script> 
+
+
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Unit-2 - Variables Assignment</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment.</p>
+<p>Submt this assignment on Blackboard. Please include a link to your homework page.</p>
+
+<h3>For each exercise use a comment line to put the Exercise number within the script. Also place a short description of what the script is doing.</h3>
+<hr />
+
+<h3>Exercises</h3>
+<p>1. Define a String variable called schoolName and assign it a value of DMACC.</p>
+<p>2. Define a String variable called courseName and assign it a value of WDV221 Intro Javascript</p>
+<p>3. Define a Numeric variable called testScore and assign it a value of 100.00. </p>
+<p>4. Define a Numeric variable called courseGrade. Do not give it a value.</p>
+<p>5. Define a Boolean variable called courseCompleted. Give it a value of false.</p>
+
+<h3>Display the value of all the variables in their own paragraphs below. </h3>
+	
+	<p> Hello Welcome to <script>document.write(schoolName); </script></p>
+	<p> The class you are taking is <script>document.write(courseName); </script> </p>
+	<p> Your recent test score was <script>document.write(testScore); </script>. </p>
+	<p> Your class grade is <script>document.write(courseGrade); </script> </p>
+	<p> Is the class completed? <script>document.write(courseCompleted); </script> (Got the rest of the semester to go...)</p>
+	
+	<h4> Or </h4>
+
+<script>
+        document.write("<p>School name: " + schoolName + " </p>");
+        document.write("<p>Course Name: " + courseName + " </p>");
+        document.write("<p>Test Score: " + testScore + " </p>");
+        document.write("<p>Course Grade: " + courseGrade + " </p>");
+        document.write("<p>Course Completed: " + courseCompleted + " </p>");
+
+
+    </script>
+
+
+
+<h3>Display the number of characters in the course name.</h3>
+
+	 <script> document.write(courseName.length); </script>
+
+<h3>Display the course name as all uppercase letters.</h3>
+
+	<script>
+        var courseNameUpper = courseName.toUpperCase();
+        document.write(courseNameUpper);
+    </script>
+
+<h3>Using the String Object determine if the course name contains the letters WDV?  Look at the String methods. Does one or more of them look inside the variable for specific content?</h3>
+
+	<p>
+        var n = courseName.includes("WDV");
+        document.write(n);
+    </p>
+    <script>
+        var n = courseName.includes("WDV"); 
+        document.write(n);
+
+    </script>
+
+</body>
+</html>

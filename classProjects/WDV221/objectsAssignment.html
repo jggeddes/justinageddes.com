@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript - Objects</title>
+
+<script>
+
+/*
+		let bookTitles = ["Beginning Javascript","Logic with ES6","Javascript Objects Made Easy"];	//use as a lookup array
+		
+		let bookPrices = [19.99, 29.49, 999.99];	//parallel accumulator array to productNames
+		
+		let bookAuthor = ["Smith", "Johson-Parker", "Westin" ];
+*/
+
+	//objects
+	let book1 = {
+  		title: "Beginning Javascript",
+  		price : 19.99,
+  		author:  "Smith",
+  			
+  		studentDiscountPrice : function() {
+  			return this.price = 15.99;
+ 			}
+		};
+
+	let book2 = {
+  		title: "Logic with ES6",
+  		price : 29.49,
+  		author:  "Johson-Parker",
+  		
+  		studentDiscountPrice : function() {
+  			return this.price = 23.60;
+  			}
+		};
+
+	let book3 = {
+  		title: "Javascript Objects Made Easy",
+  		price : 999.99,
+  		author:  "Westin",
+  		
+  		studentDiscountPrice : function() {
+  			return this.price = 799.99;
+  			}
+		};
+
+	
+	//array
+	let javascriptBooks = [
+		{
+		object: "book1",
+		title: "Beginning Javascript",
+		price : 19.99,
+		author:  "Smith",
+		
+		studentDiscountPrice : function() {
+  			return this.price = 15.99;
+  			}
+		},
+
+		{
+		object: "book2",
+		title: "Logic with ES6",
+		price : 29.49,
+		author:  "Johnson-Parker",
+		
+		studentDiscountPrice : function() {
+  			return this.price = 23.60;
+  			}
+		},
+
+		{
+		object: "book3",
+		title: "Javascript Objects Made Easy",
+		price : 999.99,
+		author:  "Westin",
+		
+		studentDiscountPrice : function() {
+  			return this.price = 799.99;
+  			}
+		}
+		]; 
+
+</script>
+
+</head>
+
+<body>
+	<h1>WDV221 Intro Javascript</h1>
+	<h2>Unit-12 Javascript Object</h2>
+
+<p id="one"></p>
+
+<p id="two"></p>
+
+<p id="three"></p>
+
+<script>
+document.querySelector("#one").innerHTML = book1.title + " " + book1.price + " " + book1.author + " " + book1.studentDiscountPrice();
+
+document.querySelector("#two").innerHTML = book2.title + " " + book2.price + " " + book2.author + " " + book2.studentDiscountPrice();
+
+document.querySelector("#three").innerHTML = book3.title + " " + book3.price + " " + book3.author + " " + book3.studentDiscountPrice();
+
+let x;
+for(x=0;x<javascriptBooks.length;x++)
+{
+	document.write(javascriptBooks[x].object + "<br>" + javascriptBooks[x].title + "<br>" + javascriptBooks[x].price + "<br>" + javascriptBooks[x].author + "<br>" + javascriptBooks[x].studentDiscountPrice() + "<br>");
+}
+
+</script>
+
+</body>
+</html>
