@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Buttons</title>
+    <link rel="stylesheet" type="text/css" href="css/paypalButtons.css">
+
+</head>
+<body>
+
+    <h1>WDV 351 Website Application Components</h1>
+    <h3 class="titleHeader">PayPal "Add to Cart" Buttons & "View Cart" Buttons</h3>
+    <h3 class="titleHeader" style="text-decoration: underline;">This is an academic project</h3>
+
+<nav>
+	<ul>
+		<li><a href="paypalButtons.html">Buy Now</a></li>
+		<li><a href="donationButtons.html">Donate</a></li>
+		<li><a href="subscriptionButtons.html">Subscribe</a></li>
+		<li><a href="addToCartButtons.html">Add to Cart</a></li>
+	</ul>
+</nav>
+
+
+    <h2 style="margin-top: 125px;">Check out our Exclusive Items!!!</h2>
+
+
+
+<!--VIEW CART BUTTON-->
+
+    <div class="viewCart">
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+    </div>
+
+
+<!--Add to Cart Buttons -->
+
+    <div class="addToCartFlex">
+
+        <div class="addToCartContainer">
+
+            <img src="images/dog-clothes_adult-boots.jpg" style="max-width: 400px">
+            <h4>Winter Dog Coat with Adult Matching Snow Boots</h4>
+            <p style="font-weight: bold; margin-top: 0;">Give as a gift or for yourself - $20<br>$5 Shipping & Handling Fee</br></p>
+
+           
+           <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="VYMXL79U47X86">
+<table>
+<tr><td><input type="hidden" name="on0" value="Dog's Name">Dog's Name</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+</table>
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+        </div>
+
+        <div class="addToCartContainer">
+
+            <img src="images/snowman_dog_toy.jpg" style="max-width: 400px; height: 240px;">
+            <h4>Snow Man Dog Toy</h4>
+
+            <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="SU7X8UUHRCNWE">
+<table>
+<tr><td><input type="hidden" name="on0" value="Size">Size</td></tr><tr><td><select name="os0">
+	<option value="Small">Small $5.00 USD</option>
+	<option value="Medium">Medium $10.00 USD</option>
+	<option value="Large">Large $15.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+
+        </div>
+
+        <div class="addToCartContainer">
+
+            <img src="images/t-shirt.jpg" style="max-width: 400px">
+            <h4>I Love Winter T-Shirt- $15</h4>
+
+            <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZTZ474D86QK5L">
+<table>
+<tr><td><input type="hidden" name="on0" value="Color">Color</td></tr><tr><td><select name="os0">
+	<option value="Black">Black </option>
+	<option value="Gray">Gray </option>
+	<option value="White">White </option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Size">Size</td></tr><tr><td><select name="os1">
+	<option value="S">S </option>
+	<option value="M">M </option>
+	<option value="L">L </option>
+	<option value="XL">XL </option>
+	<option value="XXL">XXL </option>
+</select> </td></tr>
+</table>
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+        </div>
+
+        <div class="addToCartContainer">
+
+            <img src="images/fake-snow.jpg" style="max-width: 400px">
+            <h4>Artificial Snow (Roll)- $10</h4>
+            <p style="font-weight: bold;">15 Foot of rolled up snow for indoor use!</p>
+
+           <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="C2N8QMB4P52XA">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+
+
+        </div>
+
+        <div class="addToCartContainer">
+
+            <img src="images/village-set.jpg" style="max-width: 200px">
+            <h4>Christmas Village Set - Starting at $20</h4>
+            <p style="font-weight: bold; padding: 10px;">Get this village set to decorate your home for the holiday!<br>Iowa Tax Added</br></p>
+
+            <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="RHMH2BQZ28ZP6">
+<table>
+<tr><td><input type="hidden" name="on0" value="Village Size">Village Size</td></tr><tr><td><select name="os0">
+	<option value="10 Piece Set">10 Piece Set $20.00 USD</option>
+	<option value="20 Piece Set">20 Piece Set $30.00 USD</option>
+	<option value="30 Piece Set">30 Piece Set $40.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+        </div>
+
+
+    </div>
+
+
+<!--DIGITAL DOWNLOADS-->
+
+    <h2 style="margin-top: 60px;">We also have digital downloads available immediately after payment!</h2>
+
+    <h3 style="text-align: center;">What we offer</h3>
+    <h4>NOTE: All digital products are the same price at a $4 flat fee</h4>
+
+    <ul style="text-align: center; list-style-position: inside;">
+        <li>Winter Clothing Ideas (Word Document)</li>
+        <li>Winter Clothing Ideas (PDF Document)</li>
+        <li>An image of the most popular winter fashion trend</li>
+        <li>A file which contains the word document, pdf document, and image</li>
+        <li>A video of Winter Fashion Ideas</li>
+    </ul>
+
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" style="text-align: center">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="6KVP7RAB766M4">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+
+
+</body>
+</html>
