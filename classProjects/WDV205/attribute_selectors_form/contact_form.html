@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Form</title>
+<style>
+
+form {
+	background-color:beige;
+	border: 5px groove black;
+	margin: 0 auto;
+	padding: 15px;
+	}
+legend {
+		font-size:1.3em;
+		border-bottom:2px solid red;
+		text-transform: uppercase;
+		}
+label {
+		font-family: Ariel, Helvetica, sans-serif;
+		font-size: 80%;
+		margin-top: 5px;
+		}
+fieldset {
+		border:2px solid black;
+		background-color:lightblue;
+		margin-top:1px;
+		}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: yellow;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+ input[type=text]:focus {
+  background-color: lightblue;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+/*input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=reset] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}*/
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=reset] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="flex-container">
+
+<form method="post" action="form_response_basic.php">
+<legend>Contact Us!</legend>
+<fieldset>
+<p>Please give us your contact information so we can get back to you.</p>
+<label>First Name:</label>
+<input type="text" name="firstname"><br>
+<label>Last Name:</label>
+<input type="text" name="lastname">
+<br>
+<label>Email:</label>
+<input type="email" name="email" placeholder="yourname@email.com">
+</fieldset>
+
+<fieldset>
+<p>Please choose a topic</p>
+<input type="radio" name="classes" value="web deveopment">Web Development<br>
+<input type="radio" name="classes" value="Photoshop">Photoshop<br>
+<input type="radio" name="classes" value="web design">Web Design<br>
+
+<select name="classes">
+	<option value="web_development">Web Development</option>
+	<option value="photoshop">Photoshop</option>
+	<option value="web_design">Web Design</option>
+</select>
+
+<p>Please type your message or question here:</p>
+<textarea name="message" rows="10" cols="50"></textarea>
+<br>
+</fieldset>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+</div><!--close flex container div-->
+</body>
+</html>
