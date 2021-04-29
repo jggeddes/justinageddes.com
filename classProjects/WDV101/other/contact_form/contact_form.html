@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Form</title>
+<style>
+
+form {
+	background-color:beige;
+	border: 5px groove black;
+	margin: 0 auto;
+	padding: 15px;
+	}
+legend {
+		font-size:1.3em;
+		border-bottom:2px solid red;
+		text-transform: uppercase;
+		}
+label {
+		font-family: Ariel, Helvetica, sans-serif;
+		font-size: 80%;
+		margin-top: 5px;
+		}
+fieldset {
+		border:2px solid black;
+		background-color:lightblue;
+		margin-top:10px;
+		}
+
+
+</style>
+
+
+</head>
+<body>
+
+<form method="post" action="">
+<legend>Contact Us!</legend>
+<fieldset>
+<p>Please give us your contact information so we can get back to you.</p>
+<label>First Name:</label>
+<input type="text" name="firstname"><br>
+<label>Last Name:</label>
+<input type="text" name="lastname">
+<br>
+<label>Email:</label>
+<input type="email" name="email" placeholder="yourname@email.com">
+</fieldset>
+
+<fieldset>
+<p>Please choose a topic</p>
+<input type="radio" name="classes" value="web deveopment">Web Development<br>
+<input type="radio" name="classes" value="Photoshop">Photoshop<br>
+<input type="radio" name="classes" value="web design">Web Design<br>
+
+<select name="classes">
+	<option value="web_development">Web Development</option>
+	<option value="photoshop">Photoshop</option>
+	<option value="web_design">Web Design</option>
+</select>
+
+<p>Please type your message or question here:</p>
+<textarea name="message" rows="10" cols="50"></textarea>
+<br>
+</fieldset>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+
+</body>
+</html>

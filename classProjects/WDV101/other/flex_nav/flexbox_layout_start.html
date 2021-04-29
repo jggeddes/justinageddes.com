@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Layout Full Flex</title>
+	<style>
+	
+body  {
+		background-color:beige;
+		}
+
+
+	
+.flex-container {
+			display:flex;
+			flex-direction:column;
+			width:75%;
+			font-family:Helvetica, Ariel, sans-serif;
+			margin: 20px auto;
+			background-color:white;
+			border:2px solid black;
+			border-radius:15px;
+		}
+
+header {	display:flex;
+			justify-content:space-between;
+			background-color:#DBEAF0;
+			padding:.8em;
+			text-align:center;
+			border-top-left-radius:15px;
+			border-top-right-radius:15px;
+		}
+
+header ul li {
+					list-style-type:none;
+					}
+		
+nav  {
+			color:white;
+			background-color: #176282;
+			padding:0.2em;
+			font-size:0.8em;
+		}
+/* In the nav ul below, play around with the justify-content property.* Use flex-start, center, space-around and space-between*/
+
+nav ul{
+			display:flex;
+			justify-content:center;
+			padding-inline-start: 12px;
+		}
+		
+nav ul li {
+			list-style-type:none;	
+			margin-right:1.8em;	
+		}
+		
+nav a 	{
+		color:white;
+		text-decoration:none;
+		}
+nav a:hover {
+			list-style-type:none;	
+			color:#85A9E0;
+			}
+			
+			
+/* Inside columns: Add an invisible flex container class, call this class row and add the display flex property and value. The be sure to nest all columns inside the row div class in the html section */
+
+.row {
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		}
+		
+.leftside {
+    background-color: #85C5E0;
+    padding: 10px;
+    border-right:1px solid black;
+    border-top:1px solid black;
+	width:33%;
+}	
+
+.middle {
+    background-color:#85C5E0;
+    padding: 10px;
+    border-right:1px solid black;
+    border-top:1px solid black;
+    width:33%;
+}	
+
+.rightside {
+    background-color: #85C5E0;
+    padding: 10px;
+    border-top:1px solid black;
+    width:33%;
+}	
+
+footer  {
+		color:white;
+		background-color:black;
+		text-align:center;
+		border-bottom-left-radius:13px;
+		border-bottom-right-radius:13px
+		}
+
+/* In the graybox container below, play around with the align-items property.* Use flex-start, center, flex-end, stretch and baseline.*/
+
+.grayboxcontainer  {
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:center;
+			align-items:flex-start;
+			height:250px;
+			}
+
+/* In the graybox below, play around with the width property and the flex-wrap property above in the grayboxcontainer class. Change the width of the graybox from 25% to 75px. Then change the flex-wrap property above to wrap. View the results */
+	
+.graybox  {
+	
+			background-color:lightgray;
+			width:75px;
+			padding:20px;
+			border:1px solid black;
+			margin:10px;
+			
+			}
+			
+
+	</style>
+</head>
+
+<body>
+	
+	<div class="flex-container">
+	
+		<header>
+		 	<h1>Flexbox Layout</h1>
+			
+		  <ul>
+			<li class="search">  
+			  <input type="text" class="search-input" placeholder="Search">  
+			</li> 
+		  </ul>
+		</header>
+		
+		<nav>
+		  <ul>  
+			<li><a href="">HOME</a></li>  
+			<li><a href="">PROFILE</a></li>  
+			<li><a href="">LOGOUT</a></li>  
+		  </ul>
+		</nav>
+
+		<div class="row">
+			<div class="leftside">
+				<h3>Left section</h3>
+				<p>Paragraph content</p>
+				<div class="grayboxcontainer">
+				
+					<div class="graybox">
+						<p>Gray box 1.</p>
+					</div><!--close gray box-->
+					
+					<div class="graybox">
+						<p>Gray box 2.</p>
+					</div><!--close gray box-->
+					
+				</div><!-- close gray box container-->
+			</div><!--close leftside div-->
+		
+			<div class="middle">
+				<h3>Middle section</h3>
+				<p>Paragraph content</p>
+			</div><!--close middle div-->
+	
+			<div class="rightside">
+				<h3>Right section</h3>
+				<p>Paragraph content</p>
+			</div><!--close rightside div-->
+		</div><!--close row div>
+	
+
+		<footer>
+			<p>Footer</p>
+		</footer>
+		
+	</div><!--close flex container div-->
+</body>
+</html>

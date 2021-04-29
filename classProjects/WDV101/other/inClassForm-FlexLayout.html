@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flex Form</title>
+	<style>
+
+.flex-container{
+				display:flex;
+				flex-direction:row;
+				justify-content:space-around;
+				}
+.flex-form {
+			display:flex;
+			justify-content:flex-start;
+			}
+.flex-form label {
+					text-align:right;
+					width:25%;
+					margin-right:0.5em;
+					}
+.flex-form input {
+					width:60%;
+					}
+.flex-radio {
+			display:flex;
+			flex-direction:row;
+			justify-content:space-between;
+			}
+.flex-buttons {
+				display:flex;
+				justify-content:center;
+				//margin-right:1.5em;
+				}
+
+
+		form {
+			background-color:lightsteelblue;
+			width:100%;
+			margin:1.5em;
+			border:thin solid black;
+			padding:0.5em;
+			border-radius:10px;
+		}
+
+
+	</style>
+	
+</head>
+
+<body>
+
+<div class="flex-container">
+	<section>
+		<h1>WDV101 Intro HTML and CSS</h1>
+		<h2>Unit-4 Layout</h2>
+		<h3>CSS Flexbox</h3>
+		<ol>
+			<li>Works on one direction</li>
+			<li>Current layout technique</li>
+			<li>Use Flex Containers</li>
+			<li>Which contain Flex Items</li>
+		</ol>
+	
+	</section>
+	
+	
+	<section>
+
+		<form method="post" action="#">
+	
+			<h2>Contact Us!</h2>
+
+			<p>Send us a message. We would love to hear from you!</p>
+
+			<div class="flex-form">
+				<label for="firstName">First Name: </label>
+				<input type="text" name="firstName" id="firstName" >
+			</div>
+
+			<div class="flex-form">
+				<label for="lastName">Last Name: </label>
+				<input type="text" name="lastName" id="lastName">
+			</div>
+
+			<div class="flex-form">
+				<label for="emailAddress">Email Address: </label>
+				<input type="text" name="emailAddress" id="emailAddress" placeholder="name@anywhere.com">
+			</div>
+
+				<fieldset>
+				<legend>Select Major Code</legend>
+				<div class="flex-radio">
+				  <div>
+					<input type="radio" name="majorCode" id="photoButton" value="PHO" checked>
+					<label for="photoButton">Photography</label>
+				  </div>
+				  <div>
+					<input type="radio" name="majorCode" id="grdButton" value="GRD">
+					<label for="grdButton">Graphic Design</label>
+				  </div>
+				  <div>
+					<input type="radio" name="majorCode" id="wdvButton" value="WDV">
+					<label for="wdvButton">Web Development</label>
+				  </div>
+				  </div><!--close flex-radio div-->				
+				</fieldset>
+
+
+			<p class="flex-form">	
+			<label for="selectTopic">Topic: </label>
+				<select name="selectTopic" id="selectTopic">
+					<option value="WDV">Web Development Services</option>
+					<option value="GRD">Graphic Design</option>
+					<option value="DMK">Digital Marketing</option>
+				</select>
+			</p>
+
+			<p class="flex-form">
+				<label for="inputMessage">Message: </label>
+				<textarea name="inputMessage" id="inputMessage" rows="4" cols="50">
+				</textarea>
+			</p>
+
+			<p class="flex-buttons">
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
+			</p>
+
+		</form>
+	
+	</section>
+</div><!--close flex container div-->
+</body>
+</html>
