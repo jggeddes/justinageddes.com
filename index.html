@@ -78,7 +78,6 @@ if(isset($_POST['submit'])){
   		<a style="float:right" href="#contact">Contact</a>
   		<a style="float:right" href="#portfolio">Portfolio</a>
   		<a style="float:right" href="#skills">Skills</a>
-  		<a style="float:right" href="#resume">Resume</a>
   		<a style="float:right" href="#about">About</a>
   		<a style="float:right" href="#home">Home</a>
   		</div>
@@ -109,17 +108,18 @@ if(isset($_POST['submit'])){
         <h1>About Me</h1>
         <br>
         <br>
+        <div>
+      		<a href="documents/resume.pdf" target="_blank" id="resume"><button>View my Resume</button></a>
+      	</div>
         <div class = "flex">
     		<img src = "images/me_fall.jpg" alt = "picture of Justina" width="300px" height="300px">
           <p>Hello! My name is Justina Johnson! I am a student with a passion for web development. I am on track to graduate here in May and receive my Web Development AAS degree. I have had a love for web development since my Junior year of high school when I made my first website from a website creator. From there I enjoyed using website building platforms but wanted to further understand how websites are made. I really enjoy the challenges I face each day in my web development classes. If I'm not sitting behind my laptop, I'm probably sleeping, cleaning, enjoying time with my family, or thinking about getting on my laptop when it's done charging.</p>
       	</div>
      </div>
-
-	 <div id="resume">
-        <h1>Resume</h1>
-        <br>
-        <a href="documents/resume.pdf" target="_blank"><img src="images/resume.jpg" alt="Justina's resume"></a>
-      </div>
+    
+       <!--
+        <a href="documents/resume.pdf" target="_blank" id="resume"><img src="images/resume.jpg" alt="Justina's resume"></a>
+     -->
      
      <div id="skills">
         <h1>Skills</h1>
@@ -141,6 +141,10 @@ if(isset($_POST['submit'])){
             </div>
       </div>
   
+  <!-- Flip Card Helpful links:
+  	https://www.w3schools.com/howto/howto_css_flip_card.asp
+  	https://stackoverflow.com/questions/39549506/how-to-make-a-flip-card-responsive
+  -->
 	 <div id="portfolio">
 	  	<h1>Portfolio</h1>
 	  	<br>
@@ -375,7 +379,7 @@ if(isset($_POST['submit'])){
                     	<p>-  HTML, CSS, Javascript, Local storage</p>
                     	<br>
                   		<a href = "https://github.com/jggeddes/WDV321/tree/main/dynamicRecipeProject" target = _blank><button>Git Repo</button></a>
-                  		<a href = "http://justinageddes.com/currentClasses/WDV321/dynamicRecipeProject/recipeProject.html" target = _blank><button>View Site</button></a>
+                  		<a href = "http://justinageddes.com/currentClasses/WDV321/dynamicRecipeProject/index.html" target = _blank><button>View Site</button></a>
            
     				</div>
   				</div>
